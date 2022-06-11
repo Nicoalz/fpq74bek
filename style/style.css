@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,600&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+p, input {
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #F0F4F7;
+}
+
+.visualisation {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("../img/sneaker.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.visualisation div {
+  width: 100%;
+}
+.visualisation div p {
+  margin: auto;
+  width: fit-content;
+  font-size: 4rem;
+  text-align: center;
+  background-color: white;
+  padding: 3rem 6rem;
+}
+.visualisation a {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+  background-color: #1f1e2e;
+  padding: 1rem 2rem;
+}
+.visualisation .item-1 {
+  position: absolute;
+  top: 0;
+}
+.visualisation .item-1 p {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.visualisation .item-2 p {
+  border-radius: 75px;
+}
+.visualisation .item-3 {
+  position: absolute;
+  bottom: 0;
+}
+.visualisation .item-3 p {
+  font-size: 2rem;
+  border-top-right-radius: 25px;
+  margin: 0;
+}
+@media screen and (max-width: 800px) {
+  .visualisation .item-3 p {
+    margin: auto;
+    width: 100%;
+    border-radius: 0;
+    padding: 3rem 0;
+  }
+}
+
+.dashboard {
+  background-color: #F0F4F7;
+  display: flex;
+  height: 100%;
+}
+.dashboard p, .dashboard input {
+  color: #1f1e2e;
+  font-weight: 500;
+}
+.dashboard .overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.dashboard .leftBar, .dashboard .leftBarBurger {
+  transition: 0.5s;
+  width: 22rem;
+  background-color: #1f1e2e;
+  color: #4b4e6f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+.dashboard .leftBar img, .dashboard .leftBarBurger img {
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border-radius: 15px;
+}
+.dashboard .leftBar ul, .dashboard .leftBarBurger ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 3rem;
+  width: 80%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard .leftBar ul li, .dashboard .leftBarBurger ul li {
+  margin-bottom: 2rem;
+}
+.dashboard .leftBar ul li a, .dashboard .leftBarBurger ul li a {
+  color: #4b4e6f;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: 0.5s;
+  font-weight: 500;
+}
+.dashboard .leftBar ul li a:hover, .dashboard .leftBarBurger ul li a:hover {
+  color: #f0f4f7;
+}
+@media screen and (max-width: 800px) {
+  .dashboard .leftBar {
+    display: none;
+  }
+}
+.dashboard .leftBarBurger {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+  width: 70%;
+  top: 0;
+  left: 0;
+  transform: translateX(-101%);
+}
+.dashboard .leftBarBurger ul li a {
+  font-size: 3rem;
+}
+@media screen and (max-width: 800px) {
+  .dashboard .leftBarBurger {
+    display: flex;
+  }
+}
+.dashboard .pannel {
+  width: 100%;
+  background-color: #f0f4f7;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard .pannel .topBar {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #4b4e6f;
+  width: 100%;
+  padding-left: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.dashboard .pannel .topBar .menu-icon {
+  cursor: pointer;
+  margin-right: 2rem;
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .dashboard .pannel .topBar .menu-icon {
+    display: block;
+  }
+}
+.dashboard .pannel .items-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 800px) {
+  .dashboard .pannel .items-container {
+    justify-content: center;
+  }
+}
+.dashboard .pannel .items-container .item {
+  position: relative;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: #ffffff;
+  width: 44rem;
+  height: 18rem;
+  border-radius: 15px;
+  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.dashboard .pannel .items-container .item h3 {
+  color: #000000;
+  font-weight: 500;
+}
+.dashboard .pannel .items-container .item h4, .dashboard .pannel .items-container .item h5 {
+  color: #bbbabf;
+}
+.dashboard .pannel .items-container .item .text-input {
+  border: none;
+  outline: none;
+  border-bottom: #bbbabf49 solid 1px;
+  width: 100%;
+}
+.dashboard .pannel .items-container .item .item-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* The switch - the box around the slider */
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Rounded sliders */
+}
+.dashboard .pannel .items-container .item .item-bottom .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.dashboard .pannel .items-container .item .item-bottom .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.dashboard .pannel .items-container .item .item-bottom .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.dashboard .pannel .items-container .item .item-bottom .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.dashboard .pannel .items-container .item .item-bottom input:checked + .slider {
+  background-color: #2196F3;
+}
+.dashboard .pannel .items-container .item .item-bottom input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+.dashboard .pannel .items-container .item .item-bottom input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.dashboard .pannel .items-container .item .item-bottom .slider.round {
+  border-radius: 34px;
+}
+.dashboard .pannel .items-container .item .item-bottom .slider.round:before {
+  border-radius: 50%;
+}
+.dashboard .pannel .items-container .item .save {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #1f1e2e;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-top-right-radius: 15px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.dashboard .pannel .items-container .item .save:hover {
+  background-color: #f0f4f7;
+  color: #1f1e2e;
+}
+
+.disclaimer {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
